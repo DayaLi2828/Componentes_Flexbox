@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <nav class="navegacion_Contenedor">
+    <nav class="navegacion__Contenedor">
       <h1>Barra de Navegación</h1>
         <div class="navegacion__enlaces">
           <a href="#">Producto</a>
@@ -20,14 +20,14 @@
   </header>
 
 
-  <section class="tarjetas_contenedor">
+  <section class="tarjetas__contenedor">
     <div class="tarjeta">
       <h2>Pomerania</h2>
         <img src="descarga.jpg" alt="imagen de un perrito">
         <p>Es un perro pequeño, esponjoso y con mucho pelo. Son conocidos por su apariencia adorable y su carácter vivaz y amigable.</p>
           <h3>$1.500.000</h3>
             <div class="boton">
-              <button class="boton_comprar">Comprar</button>
+              <button class="boton__comprar">Comprar</button>
             </div>
     </div>
 
@@ -37,7 +37,7 @@
         <p>Es un perro pequeño y robusto, con orejas erectas y cara achatada. Tinen un carácter afectuoso, sociable y suele ser muy cariñoso con su familia.</p>
           <h3>$1.500.000</h3>
             <div class="boton">
-              <button class="boton_comprar">Comprar</button>
+              <button class="boton__comprar">Comprar</button>
             </div>
     </div>
 
@@ -47,18 +47,82 @@
         <p>Es una pequeño perro esponjoso y con una expresión alegre. Es un perro alerta, inteligente y leal que hace un excelente perro de compañia.</p>
           <h3>$1.500.000</h3>
             <div class="boton">
-              <button class="boton_comprar">Comprar</button>
+              <button class="boton__comprar">Comprar</button>
             </div>
     </div>
+    
   </section>
 
-  <div class="contenedor_galeria">
+  <div class="contenedor__galeria">
       <img src="iglesia.jpg" alt="imagen de una iglesia">
       <img src="quebrada.jpg" alt="imagen de una quebrada" >
       <img src="selva.jpg" alt="imagen de una selva">
       <img src="sapitos.jpg" alt="imagen de una selva">
   </div>
-  
-  
+
+  <form class="formulario__contacto">
+    <h2 class="Titulo__formulario">Formulario de Contacto</h2>
+    <div class="Formulario__lista">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="Formulario__lista">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="Formulario__lista">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+
+  <div class="encabezado__seccion">
+    <img src="perro (1).png" alt="icono de sección">
+    <h2>Titulo encabezado</h2>
+  </div>
+
+  <ul class="lista__tareas">
+    <h3>Lista de Tareas</h3>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+  </ul>
+
+
+  <section class="componente__testimonial">
+    <h2 class="testimonial__titulos">Testimonios</h2>
+    <div class="testimonial__contenedor">
+      <div class="testimonial__item">
+        <img src="avatar homobre.png" alt="imagen de un cliente">
+        <div class="testimonial__contenido">
+          <p class="testimonial__parrafo">"Excelente servicio y atención. ¡Recomiendo ampliamente!"</p>
+          <h4>- Cliente Satisfecho</h4>
+        </div>
+      </div>
+      <div class="testimonial__item">
+        <img src="avatar mujer.png" alt="imagen de una cliente">
+        <div class="testimonial__contenido">
+          <p class="testimonial__parrafo">"Los productos son de alta calidad y llegaron a tiempo."</p>
+          <h4>- Cliente Feliz</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <aside class="sidebar__navegacion">
+    <ul class="menu__principal">
+      <li class="menu__item"><a href="#">Inicio</a></li>
+      <li class="menu__item"><a href="#">Productos</a></li>
+      <li class="menu__item"><a href="#">Servicios</a></li>
+      <li class="menu__item"><a href="#">Contacto</a></li>
+    </ul>
+  </aside>
+
 </body>
 </html>

@@ -1,215 +1,316 @@
+/*
+  Selecciona todos los elementos y resetea el padding,
+  margin y establece el box-sizing en border-box para un
+  modelo de caja consistente.
+*/
 *{
   padding: 0;
   margin: auto;
   box-sizing: border-box;
 }
 
+/* Define una variable CSS para el color de la barra de navegación */
 :root{
   --color_barra: #ffffff;
 }
+
+/* Contenedor de la barra de navegación */
 .navegacion__Contenedor {
-  background-color: #924ef1;
-  color: var(--color_barra);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  box-shadow: #000000 0px 10px 30px;
-}
-.navegacion__enlaces a{
-  color:var(--color_barra);
-  text-decoration: none;
-  margin: 15px;
-}
-.tarjeta img{
-  padding: 10px;
-  width: 150px;
-  height: 190px;
-
-}
-h2{
-  color: var(--color_barra);
-  text-align: center;
-}
-.tarjeta{
-  background-color: #ab78f3e7;
-  padding: 20px;
-  margin:30px;
-  width: 200px;
-  height:460px;
-  border-radius: 30px;
-  color: var(--color_barra);
-}
-.tarjetas__contenedor{
-  display: flex;
-  justify-content: center;
-}
-
-h3{
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  color:white;
-}
-
-.boton__comprar{
-  width: 100px;
-  height: 25px;
-  text-align: center;
-  color: #000000;
-  border: none;
-  border-radius: 30px;
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  padding: 5px;
-}
-
-.contenedor__galeria{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  /* La altura se ajustará automáticamente */
-  width: 80%;
-  border-radius: 30px;
-  box-shadow: #000000 0px 10px 30px;
-  background-color: #ab78f3e7;
-}
-.contenedor__galeria img{
-  width: 20%; 
-  height: 20%; 
-  margin: 5px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.formulario__contacto{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 18%;
-  background-color: #ab78f3e7;
-  margin-top: 40px;
-  border-radius: 10px;
-}
-
-.encabezado__seccion{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #924ef1;
-  max-width: 80%;
-  padding: 20px;
-  box-shadow: #000000 0px 10px 30px;
-  color:#ffffff;
-  margin-top: 30px;
-}
-.encabezado__seccion img{
-  width: 50px;
-  height: 50px;
-  align-items: end;
-}
-.encabezado__seccion h2{
-  color: #ffffff;
-  font-size: 1.5rem;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.lista__tareas{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  background-color: #ab78f3e7;
-  max-width: 10%;
-  margin-top: 30px;
-  border-radius: 20px;
-}
-h3{
-  color: #700dfa;
-}
-.lista__tareas li{
-  color: #ffffff;
-}
-.componente__testimonial {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  
-  background-color: #ab78f3e7;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: #000000 0px 10px 30px;
-  margin-top: 30px;
-  max-width: 30%;
-  gap: 20px;
-}
-
-.testimonial__titulos {
-  margin: 0 0 10px 0; 
-  color: rgb(255, 255, 255);
-}
-
-.testimonial__contenedor {
-  display: flex;
-  flex-direction: column; 
-  gap: 20px;
-  width: 100%;
-}
-
-.testimonial__item {
-  display: flex;
-  align-items: center; 
-  gap: 15px; 
-}
-
-.testimonial__contenido {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.testimonial__item img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial__parrafo {
-  color: #ffffff;
-  font-size: 1rem;
-  margin: 0; 
-}
-.sidebar__navegacion{
+  background-color: #9350f1; /* Color de fondo */
+  color: var(--color_barra); /* Color de texto usando la variable */
   display: flex; /* Habilita Flexbox */
-  flex-direction: column; /* Apila los ítems verticalmente */
-  align-items: flex-start; /* Alinea los ítems a la izquierda */
-  justify-content: flex-start; /* Justifica el contenido al inicio */
-  list-style: none; /* Quita los puntos de la lista */
-  padding: 10px;
-  margin: 0;
-  max-width: 150px;
-  background-color: rgb(0, 0, 0);
+  flex-flow: row nowrap; /* Define la dirección y el ajuste de los elementos */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  padding: 1rem 2rem; /* Espaciado interno */
+  box-shadow: #000000 0px 10px 30px; /* Sombra de la caja */
 }
+
+/* Estilos para los enlaces dentro del contenedor de navegación */
+.navegacion__enlaces a{
+  color:var(--color_barra); /* Color de texto usando la variable */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  margin: 15px; /* Espacio externo entre enlaces */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.tarjeta img{
+  padding: 10px; /* Espaciado interno */
+  width: 150px; /* Ancho de la imagen */
+  height: 190px; /* Alto de la imagen */
+
+}
+
+/* Estilos para los títulos h2 */
+h2{
+  color: var(--color_barra); /* Color de texto usando la variable */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para las tarjetas de productos */
+.tarjeta{
+  background-color: #ab78f3e7; /* Color de fondo con transparencia */
+  padding: 20px; /* Espaciado interno */
+  margin:30px; /* Espacio externo */
+  width: 200px; /* Ancho fijo */
+  height:460px; /* Alto fijo */
+  border-radius: 30px; /* Bordes redondeados */
+  color: var(--color_barra); /* Color de texto usando la variable */
+}
+
+/* Contenedor para todas las tarjetas */
+.tarjetas__contenedor{
+  display: flex; /* Habilita Flexbox */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilos para los títulos h3 */
+h3{
+  margin: 10px; /* Espacio externo */
+  display: flex; /* Habilita Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color:white; /* Color de texto */
+}
+
+/* Estilos para el botón de compra */
+.boton__comprar{
+  width: 100px; /* Ancho del botón */
+  height: 25px; /* Alto del botón */
+  text-align: center; /* Alinea el texto al centro */
+  color: #000000; /* Color de texto */
+  border: none; /* Sin borde */
+  border-radius: 30px; /* Bordes redondeados */
+  display: flex; /* Habilita Flexbox */
+  justify-items: center; /* Alinea los elementos a lo largo del eje secundario */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  padding: 5px; /* Espaciado interno */
+}
+
+/* Contenedor de la galería de imágenes */
+.contenedor__galeria{
+  display: flex; /* Habilita Flexbox */
+  flex-flow: row wrap; /* Permite que las imágenes se envuelvan en varias filas */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  width: 80%; /* Ancho del contenedor */
+  border-radius: 30px; /* Bordes redondeados */
+  box-shadow: #000000 0px 10px 30px; /* Sombra de la caja */
+  background-color: #ab78f3e7; /* Color de fondo con transparencia */
+}
+
+/* Estilos para las imágenes dentro de la galería */
+.contenedor__galeria img{
+  width: 20%; /* Ancho de cada imagen */
+  height: 20%; /* Alto de cada imagen */
+  margin: 5px; /* Espacio externo entre imágenes */
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+}
+
+/* Contenedor del formulario de contacto */
+.formulario__contacto{
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 15px; /* Espacio entre los elementos */
+  width: 18%; /* Ancho del formulario */
+  background-color: #ab78f3e7; /* Color de fondo con transparencia */
+  margin-top: 40px; /* Espacio en la parte superior */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Contenedor del encabezado de la sección */
+.encabezado__seccion{
+  display: flex; /* Habilita Flexbox */
+  flex-direction: row; /* Coloca los elementos en una fila */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  background-color: #924ef1; /* Color de fondo */
+  max-width: 80%; /* Ancho máximo */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: #000000 0px 10px 30px; /* Sombra de la caja */
+  color:#ffffff; /* Color de texto */
+  margin-top: 30px; /* Espacio en la parte superior */
+}
+
+/* Estilos para la imagen del encabezado */
+.encabezado__seccion img{
+  width: 50px; /* Ancho de la imagen */
+  height: 50px; /* Alto de la imagen */
+  align-items: end; /* Alinea el elemento al final del eje secundario */
+}
+
+/* Estilos para el título del encabezado */
+.encabezado__seccion h2{
+  color: #ffffff; /* Color de texto */
+  font-size: 1.5rem; /* Tamaño de la fuente */
+  flex-grow: 1; /* Permite que el elemento ocupe el espacio restante */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para la lista de tareas */
+.lista__tareas{
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 10px; /* Espacio entre los elementos */
+  padding: 10px; /* Espaciado interno */
+  background-color: #ab78f3e7; /* Color de fondo con transparencia */
+  max-width: 10%; /* Ancho máximo */
+  margin-top: 30px; /* Espacio en la parte superior */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Estilos para los títulos h3 */
+h3{
+  color: #700dfa; /* Color de texto */
+}
+
+/* Estilos para los elementos de la lista de tareas */
+.lista__tareas li{
+  color: #ffffff; /* Color de texto */
+}
+
+/* Contenedor del componente de testimonios */
+.componente__testimonial {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Alinea los elementos horizontalmente al centro */
+  
+  background-color: #ab78f3e7; /* Color de fondo con transparencia */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: #000000 0px 10px 30px; /* Sombra de la caja */
+  margin-top: 30px; /* Espacio en la parte superior */
+  max-width: 30%; /* Ancho máximo */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilos para los títulos de testimonios */
+.testimonial__titulos {
+  margin: 0 0 10px 0; /* Espacio externo */
+  color: rgb(255, 255, 255); /* Color de texto */
+}
+
+/* Contenedor de los testimonios individuales */
+.testimonial__contenedor {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 20px; /* Espacio entre los elementos */
+  width: 100%; /* Ancho del contenedor */
+}
+
+/* Estilos para cada ítem de testimonio */
+.testimonial__item {
+  display: flex; /* Habilita Flexbox */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+/* Estilos para el contenido de cada testimonio */
+.testimonial__contenido {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  gap: 5px; /* Espacio entre los elementos */
+}
+
+/* Estilos para las imágenes de los testimonios */
+.testimonial__item img {
+  width: 50px; /* Ancho de la imagen */
+  height: 50px; /* Alto de la imagen */
+  border-radius: 50%; /* Borde circular */
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+}
+
+/* Estilos para el párrafo del testimonio */
+.testimonial__parrafo {
+  color: #ffffff; /* Color de texto */
+  font-size: 1rem; /* Tamaño de la fuente */
+  margin: 0; /* Sin espacio externo */
+}
+
+/* Estilos para la barra lateral completa */
+.sidebar__navegacion {
+  background-color: #34495e; /* Color de fondo oscuro */
+  width: 250px; /* Ancho fijo de la barra lateral */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  position: fixed; /* Hace que la barra se quede pegada al desplazarte */
+  left: 0; /* La alinea a la izquierda de la página */
+  top: 0; /* La alinea en la parte superior */
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0; /* Sin espacio externo */
+  padding: 0; /* Sin espaciado interno */
+}
+
+/* Estilos para la lista principal (ul) */
 .menu__principal {
-  height:100%; /* Ocupa toda la altura de la ventana */
-  display: flex; /* Habilita Flexbox *
-  /
-  flex-direction: column; /* Apila los ítems verticalmente */
-  align-items: flex-start; /* Alinea los ítems a la izquierda */
-  justify-content: flex-start; /* Justifica el contenido al inicio */
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  height: 100%; /* Ocupa la altura total de la barra lateral */
   list-style: none; /* Quita los puntos de la lista */
-  padding: 0;
-  margin: 0;
+  margin: 0; /* Sin espacio externo */
+  padding: 0; /* Sin espaciado interno */
 }
+
+/* Estilos para los enlaces del menú */
 .menu__item a {
-  display: block; /* Para que el enlace ocupe todo el ancho del <li> */
-  padding: 15px 20px;
-  text-decoration: none;
-  color: #ecf0f1;
-  font-family: sans-serif;
-  transition: background-color 0.3s ease;
+  display: block; /* Hace que el enlace ocupe todo el espacio del <li> */
+  padding: 15px 20px; /* Espaciado interno */
+  text-decoration: none; /* Quita el subrayado */
+  color: #ecf0f1; /* Color de texto */
+  font-family: sans-serif; /* Tipo de fuente */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Efecto al pasar el mouse por encima del enlace */
+.menu__item a:hover {
+  background-color: #2c3e50; /* Cambia el color de fondo */
+}
+
+/* Estilos generales para el footer */
+.footer {
+  background-color: #9350f1; /* Color de fondo oscuro */
+  color: #ecf0f1; /* Color de texto claro */
+  padding: 40px 20px; /* Espaciado interno */
+  display: flex; /* Habilita Flexbox */
+  flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+  justify-content: space-around; /* Distribuye el espacio entre las columnas */
+  align-items: flex-start; /* Alinea las columnas en la parte superior */
+  margin-top: 30px;
+}
+
+/* Estilos para cada columna del footer */
+.footer__columna {
+  flex-grow: 1; /* Hace que cada columna ocupe el mismo espacio */
+  flex-basis: 0; /* Un valor inicial para que flex-grow funcione correctamente */
+  margin: 10px; /* Espacio entre columnas */
+  min-width: 250px; /* Asegura que no se hagan demasiado pequeñas */
+}
+
+/* Estilos para los títulos del footer */
+.footer__columna h3 {
+  color: #ecf0f1; /* Color de texto */
+  margin-bottom: 15px; /* Espacio en la parte inferior */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+}
+
+/* Estilos para las listas y enlaces del footer */
+.footer__columna ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0; /* Sin espaciado interno */
+  margin: 0; /* Sin espacio externo */
+}
+
+/* Estilos para los enlaces del footer */
+.footer__columna a {
+  color: #bdc3c7; /* Un color de enlace más suave */
+  text-decoration: none; /* Quita el subrayado */
+  display: block; /* Hace que el enlace ocupe todo el ancho */
+  margin-bottom: 5px; /* Espacio en la parte inferior */
+}
+
+/* Efecto al pasar el mouse por encima del enlace del footer */
+.footer__columna a:hover {
+  color: #ffffff; /* Color blanco al pasar el mouse */
+}
+
+/* Estilos para los párrafos del footer */
+.footer__columna p {
+  line-height: 1.6; /* Altura de la línea */
 }
